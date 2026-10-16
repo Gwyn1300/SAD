@@ -1,0 +1,70 @@
+scipy sci
+numpy np
+math
+import matlab.pyplot as plt
+scipy.stats as st
+
+a = 3
+sigma = 2
+n = 100
+X = st.norm.rvs(cok = a, scale = sigma, size = n)
+plt.plot(X)
+plt.show()
+
+Законы распределения - объекты
+Нас интересует norm - нормально распределенный ЗР
+t - распределение стьюдента
+F - Фишера
+chi2 - Хи квадрат
+
+Методы
+Можно генерировать выборки с помощью ЗР - rvs
+norm.rvs(loc = 103(a), scale(сигма), size = n(объем выборки))
+ch2.rvs(fg = 2, size = n)
+
+cdf = F - функция распределения
+cumulation distribution function неубывающая 
+
+pdf = f - probability density function плотность вероятности
+
+Fx(xq) = P(X<xq(квантиль уровня)) = q(уровень квантиля)
+ppf (percent procent function) = cdf^-1 
+
+Частотные интервалы
+a = 3
+sigma = 2
+n = 100
+X = st.norm.rvs(cok = a, scale = sigma, size = n)
+plt.plot(X)
+plt.show()
+rez = np.histogram(X, bins = 5)
+print(rez)
+
+data = [0,0,1,1,2,2,4,4,5,5]
+Z = np.histogram(data, bins = 3)
+print(Z[0])
+print(Z[1])
+
+Z = np.histogram(data, bins = 3, density = 1)
+print(Z[0])
+print(Z[1])
+
+shag = Z[1][1] - Z[1][0]
+print(shag)
+
+Y = np.sum(Z[0])*shag
+print (Y)
+
+pet.hist(data, bins = 3, density = 0)
+pet.show()
+
+pip.title("name")
+pip.hist(x, bins = 15, density=1)
+plt.show()
+
+
+способы группировки  в интервале:
+sturges - близкие к нормальным
+scott - хвостатые
+fd 
+rice
